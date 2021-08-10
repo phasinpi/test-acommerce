@@ -1,0 +1,104 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+    outline: 0;
+    padding: 0;
+
+    .page-item {
+        outline: 0;
+
+        &:first-child,
+        &:last-child {
+            .page-link {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                color: #fff;
+                border: none;
+                border-radius: 0;
+                transition: 0.4s all ease-in-out;
+            }
+
+            &.disabled {
+                .page-link {
+                    color: #fff;
+                }
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            .page-link {
+                color: #000;
+                border-color: none;
+                background-color: #b30000;
+            }
+        }
+
+        &.active {
+            .page-link {
+                color: #000;
+                border-color: none;
+                background-color: #b30000;
+            }
+        }
+
+        &.disabled {
+            >.page-link {
+                border-color: none;
+                background-color: #cccccc;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .page-link {
+        position: relative;
+        display: block;
+        margin: 0 0.5rem;
+        width: 40px;
+        height: 40px;
+        color: #000;
+        line-height: 1.25;
+        text-align: center;
+        border: none;
+        border-radius: 0;
+        background-color: #ffcce5;
+        transition: 0.4s all ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: #000;
+            outline: 0;
+            box-shadow: none;
+            border-color: none;
+            background-color: #b30000;
+        }
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .pagination {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .pagination {
+
+        .page-item:first-child,
+        .page-item.disabled,
+        .page-item:last-child {
+            display: list-item;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.section {
+  padding: 5rem 0;
+}
+.section.section--news {
+  margin: 5rem 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  outline: 0;
+  padding: 0;
+}
+.pagination .page-item {
+  outline: 0;
+}
+.pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  transition: 0.4s all ease-in-out;
+}
+.pagination .page-item:first-child.disabled .page-link, .pagination .page-item:last-child.disabled .page-link {
+  color: #fff;
+}
+.pagination .page-item:hover .page-link, .pagination .page-item:focus .page-link, .pagination .page-item:active .page-link {
+  color: #000;
+  border-color: none;
+  background-color: #b30000;
+}
+.pagination .page-item.active .page-link {
+  color: #000;
+  border-color: none;
+  background-color: #b30000;
+}
+.pagination .page-item.disabled > .page-link {
+  border-color: none;
+  background-color: #cccccc;
+  pointer-events: none;
+}
+.pagination .page-link {
+  position: relative;
+  display: block;
+  margin: 0 0.5rem;
+  width: 40px;
+  height: 40px;
+  color: #000;
+  line-height: 1.25;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  background-color: #ffcce5;
+  transition: 0.4s all ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination .page-link:hover, .pagination .page-link:focus, .pagination .page-link:active {
+  color: #000;
+  outline: 0;
+  box-shadow: none;
+  border-color: none;
+  background-color: #b30000;
+}
+
+@media only screen and (max-width: 1025px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .pagination .page-item:first-child,
+.pagination .page-item.disabled,
+.pagination .page-item:last-child {
+    display: list-item;
+  }
+}
+.card.card--product {
+  padding: 1rem;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+.card.card--product:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.card.card--product .card__figure {
+  margin-bottom: 2.5rem;
+}
+.card.card--product .card__figure img {
+  width: 100%;
+}
+.card.card--product .card__rating {
+  margin-bottom: 2rem;
+}
+.card.card--product .card__rating i {
+  color: red;
+}
